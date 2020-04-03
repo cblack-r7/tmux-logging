@@ -22,7 +22,7 @@ clear_history_key=${clear_history_key:-$default_clear_history_key}
 filename_suffix="#{session_name}-#{window_index}-#{pane_index}-%Y%m%dT%H%M%S.log"
 
 # Logging options
-default_logging_path="$HOME"
+default_logging_path="$HOME/logs"
 logging_path=$(tmux show-option -gqv "@logging-path")
 logging_path=${logging_path:-$default_logging_path}
 
@@ -33,7 +33,7 @@ logging_filename=${logging_filename:-$default_logging_filename}
 logging_full_filename="${logging_path}/${logging_filename}"
 
 # Screen capture options
-default_screen_capture_path="$HOME"
+default_screen_capture_path="$HOME/logs"
 screen_capture_path=$(tmux show-option -gqv "@screen-capture-path")
 screen_capture_path=${screen_capture_path:-$default_screen_capture_path}
 
@@ -44,7 +44,7 @@ screen_capture_filename=${screen_capture_filename:-$default_screen_capture_filen
 screen_capture_full_filename="${screen_capture_path}/${screen_capture_filename}"
 
 # Save complete history options
-default_save_complete_history_path="$HOME"
+default_save_complete_history_path="$HOME/logs"
 save_complete_history_path=$(tmux show-option -gqv "@save-complete-history-path")
 save_complete_history_path=${save_complete_history_path:-$default_save_complete_history_path}
 

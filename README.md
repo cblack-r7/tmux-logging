@@ -83,6 +83,17 @@ Reload TMUX environment:
 
 You should now have all `tmux-logging` key bindings defined.
 
+### Automatically Start tmux-logging
+
+In order to start tmux-logging at the creation of a new pane, simply add the following snippet to your preferred shells startup configuration (ie `.bashrc` or `.zshrc`):
+
+```
+f [ -n "$TMUX_PANE" ] && [ "$TMUX_PANE_AUTORUN" != "0" ]; then
+  ~/clone/path/scripts/toggle_logging.sh
+  export TMUX_PANE_AUTORUN=0
+fi
+```
+
 ### Installing `ansifilter` (recommended for OSX users)
 
 If you're on OSX, it is recommeneded to install `ansifilter`:
